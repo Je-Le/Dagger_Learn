@@ -1,8 +1,8 @@
 package com.example.daggerlearn.presentation.di
 
-import com.example.daggerlearn.presentation.screen.main.di.MainScreenModule
+import com.example.daggerlearn.presentation.screen.main.di.ViewModelModule
 import dagger.Module
 
-@Module( includes = [ MainScreenModule::class ] )
+@Module()
 class PresentationModule {
 }

@@ -13,15 +13,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.example.daggerlearn.core.ext.appComponent
-import com.example.daggerlearn.presentation.screen.main.vm.MainViewModel
+import com.example.daggerlearn.core.ext.viewModelStore
 
 @Composable
 fun MainScreen() {
 
     val context = LocalContext.current
 
-    val viewModel = viewModel(initializer = {context.appComponent.mainViewModel()})
+    val viewModel = viewModel(initializer = {context.viewModelStore.mainViewModel()})
 
     val state = viewModel.state.observeAsState().value!!
     val inputText = remember {

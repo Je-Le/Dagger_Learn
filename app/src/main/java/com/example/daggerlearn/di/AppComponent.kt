@@ -4,9 +4,11 @@ import android.content.Context
 import com.example.daggerlearn.MainActivity
 import com.example.daggerlearn.data.storage.repository.person.PersonStorageRepository
 import com.example.daggerlearn.model.Person
+import com.example.daggerlearn.presentation.di.ViewModelComponent
 import com.example.daggerlearn.presentation.screen.main.vm.MainViewModel
 import dagger.BindsInstance
 import dagger.Component
+import dagger.Subcomponent
 
 @Component( modules = [ AppModule::class ] )
 interface AppComponent {
@@ -19,9 +21,12 @@ interface AppComponent {
         fun build(): AppComponent
 
     }
-    fun personStorageRepository(): PersonStorageRepository
+
+    //SubComponent
+    fun viewModelComponent(): ViewModelComponent.Builder
+
     fun person(): Person
-    fun mainViewModel(): MainViewModel
+
 
     fun inject(mainActivity: MainActivity)
 
