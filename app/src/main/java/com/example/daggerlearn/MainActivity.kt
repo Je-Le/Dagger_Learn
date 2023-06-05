@@ -15,7 +15,7 @@ import androidx.compose.ui.Modifier
 import com.example.daggerlearn.core.ext.appComponent
 import com.example.daggerlearn.model.Person
 import com.example.daggerlearn.presentation.screen.main.MainScreen
-import com.example.daggerlearn.ui.theme.DaggerLearnTheme
+import com.example.daggerlearn.presentation.ui.theme.DaggerLearnTheme
 import javax.inject.Inject
 
 class MainActivity : ComponentActivity() {

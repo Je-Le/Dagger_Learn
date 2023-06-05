@@ -1,6 +1,8 @@
 package com.example.daggerlearn
 
 import android.app.Application
+import com.example.daggerlearn.di.AppComponent
+import com.example.daggerlearn.di.DaggerAppComponent
 
 class App: Application() {
 
@@ -8,8 +10,16 @@ class App: Application() {
 
     override fun onCreate() {
         super.onCreate()
+        init()
+    }
+
+    private fun init() {
         INSTANCE = this
-        appComponent = DaggerAppComponent.create()
+        appComponent = DaggerAppComponent
+            .builder()
+            .context(this)
+            .build()
+
     }
 
     companion object{

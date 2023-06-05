@@ -1,5 +1,6 @@
 package com.example.daggerlearn.presentation.screen.main.di
 
+import com.example.daggerlearn.data.storage.repository.person.PersonStorageRepository
 import com.example.daggerlearn.model.Person
 import com.example.daggerlearn.presentation.screen.main.vm.MainViewModel
 import dagger.Module
@@ -10,9 +11,10 @@ class MainScreenModule {
 
     @Provides
     fun provideMainViewModel(
-        person: Person
+        person: Person,
+        personStorageRepository: PersonStorageRepository
     ): MainViewModel{
-        return MainViewModel(person)
+        return MainViewModel(person,personStorageRepository)
     }
 
 }

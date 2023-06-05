@@ -1,4 +1,4 @@
-package com.example.daggerlearn.ui.theme
+package com.example.daggerlearn.presentation.ui.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Shapes

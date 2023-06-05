@@ -45,7 +45,7 @@ fun MainScreen() {
                 .fillMaxWidth()
         )
 
-        Button(onClick = { viewModel.setState(inputText.value) },
+        Button(onClick = { viewModel.setPersonToStorage(inputText.value) },
             modifier = Modifier.padding(bottom = 10.dp)) {
             Text(text = "Set text")
         }
